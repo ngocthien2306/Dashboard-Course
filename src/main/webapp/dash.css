@@ -1,0 +1,130 @@
+@charset "ISO-8859-1";
+.container-dashboard {
+  width: (100% - 250px);
+  margin-top: 70px;
+  margin-left: 250px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  background: url(background.jpg);
+
+}
+.wrapper.collapse .container-dashboard{
+  width: calc(100% - 70px);
+  margin-left: 70px;
+  align-items: center;
+}
+.dashboard-left {
+  background-color: #F6F8FA;
+  width: 100%;
+
+}
+.dashboard-right {
+  background-color: #F6F8FA;
+  margin: 0 20px;
+  width: 33%;
+}
+.dashboard {
+  border: 1px solid #5DADE2;
+  background-color: #F4F6F7;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  margin: 20px;
+}
+.header-dash {
+  width: 100%;
+  border-bottom: 1px solid #CCD1D1;
+  height: 30px;
+  padding: 5px;
+
+
+}
+.content-dash {
+  display: block;
+}
+.title-dash {
+  color: #27B3F7;
+  font-size: 17px;
+  margin: 5px;
+}
+.message-content {
+  width: 90%;
+  margin: auto;
+}
+.message-dash {
+  font-size: 14px;
+}
+.link-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-right: 8px;
+
+
+}
+.link-list .item-left  {
+  left: 300px;
+}
+.link-item {
+  margin: 2px 8px 0 8px;
+}
+.link-item a{
+color: #27B3F7;
+}
+.progress {
+  vertical-align: baseline;
+}
+@-webkit-keyframes progress-bar-stripes {
+  0% {
+    background-position-x: 1rem;
+  }
+}
+.progress {
+  margin: 10px;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1rem;
+  overflow: hidden;
+  font-size: 0.75rem;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+}
+
+.progress-bar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #2fa4e7;
+  transition: width 0.6s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-bar {
+    transition: none;
+  }
+}
+
+.progress-bar-striped {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+}
+
+.progress-bar-animated {
+  -webkit-animation: 1s linear infinite progress-bar-stripes;
+  animation: 1s linear infinite progress-bar-stripes;
+}
+@keyframes loading{
+  100%{
+    transform: translateX(100%);
+  }
+}
