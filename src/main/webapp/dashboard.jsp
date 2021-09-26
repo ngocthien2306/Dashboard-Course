@@ -42,24 +42,22 @@
 			</div>
 			<div class="dashboard">
 				<div class="header-dash">
-					<span>Homeword 2</span>
+					<span>Chap 5 exercise 1</span>
 				</div>
 				<div class="content-dash">
-					<h3 class="title-dash">Create JSP file</h3>
+					<h3 class="title-dash">Email</h3>
 					<div class="message-content">
-						<span class="message-dash"> Some quick example text to
-							build on the card title and make up the bulk of the card's
-							content. </span>
+						<span class="message-dash"></span>
 					</div>
 					<div class="link-dash">
 						<ul class="link-list">
-							<li class="link-item"><a href="#">Go to exercise</a></li>
+							<li class="link-item"><a href="_ch05ex01/index.jsp">Go to exercise</a></li>
 							<li class="link-item"><a href="#">Code</a></li>
 							<li class="link-item"><a href="#">Comment</a></li>
 						</ul>
 					</div>
 					<div class="progress">
-						<div class="progress-bar" role="progressbar" style="width: 36%;"
+						<div class="progress-bar" role="progressbar" style="width: 100%;"
 							aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 				</div>
