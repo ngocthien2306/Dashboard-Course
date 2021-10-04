@@ -22,7 +22,7 @@
 		<div class="dashboard-left">
 			<div class="dashboard">
 				<div class="header-dash">
-					<span>Chap 4 exercise 1</span>
+					<span>Survey</span>
 				</div>
 				<div class="content-dash">
 					<h3 class="title-dash">Create JSP file</h3>
@@ -33,7 +33,7 @@
 					</div>
 					<div class="link-dash">
 						<ul class="link-list">
-							<li class="link-item"><a href="_ch04ex01/index.html">Go
+							<li class="link-item"><a href="_survey/index.html">Go
 									to exercise</a></li>
 							<li class="link-item"><a href="#">Code</a></li>
 							<li class="link-item"><a href="#"> <label for="click">Comment</label></a></li>
@@ -60,7 +60,7 @@
 			</div>
 			<div class="dashboard">
 				<div class="header-dash">
-					<span>Chap 5 exercise 1</span> 
+					<span>Email</span> 
 				</div>
 				<div class="content-dash">
 					<h3 class="title-dash">Create JSP file</h3>
@@ -71,7 +71,7 @@
 					</div>
 					<div class="link-dash">
 						<ul class="link-list">
-							<li class="link-item"><a href="_ch05ex0102/index.jsp">Go
+							<li class="link-item"><a href="_email/index.jsp">Go
 									to exercise</a></li>
 							<li class="link-item"><a href="#">Code</a></li>
 							<li class="link-item"><a href="#"> <label for="click">Comment</label></a></li>

@@ -1,6 +1,6 @@
-package com.ch05ex0102.data;
+package com.email.data;
 
-import com.ch05ex0102.business.User;
+import com.email.business.User;
 
 public class UserDB {
 
