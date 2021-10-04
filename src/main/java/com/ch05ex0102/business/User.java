@@ -1,4 +1,4 @@
-package com.ch05ex1.business;
+package com.ch05ex0102.business;
 
 import java.io.Serializable;
 

@@ -1,40 +1,32 @@
-package com.ch05ex1.email;
+package com.ch05ex0102.email;
 
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-import com.ch05ex1.business.User;
+import com.ch05ex0102.business.User;
 
 import javax.servlet.annotation.WebServlet;
 
-import com.ch05ex1.data.UserDB;
+import com.ch05ex0102.data.UserDB;
 
-@WebServlet(urlPatterns = "/_ch05ex01/emailList")
+@WebServlet(urlPatterns = "/_ch05ex0102/emailList")
 public class EmailListServlet extends HttpServlet {
 
-    @Override
+	@Override
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response)
             throws ServletException, IOException {
-        String url = "/_ch05ex01/index.jsp";
-        
+        String nextUrl = "/_ch05ex0102/index.jsp";
         
         // get current action
         String action = request.getParameter("action");
-        
-        // print action value to console AND log file
-        System.out.println("EmailListServlet action: " + action);
-        log("action=" + action);
-        
-        // set default action
         if (action == null) {
             action = "join";  // default action
         }
-
         // perform action and set URL to appropriate page
         if (action.equals("join")) {
-            url = "/_ch05ex01/index.jsp";    // the "join" page
+        	nextUrl = "/_ch05ex0102/index.jsp";    // the "join" page
         } 
         else if (action.equals("add")) {
             // get parameters from the request
@@ -50,25 +42,18 @@ public class EmailListServlet extends HttpServlet {
             if (firstName == null || lastName == null || email == null ||
                 firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
                 message = "Please fill out all three text boxes.";
-                url = "/_ch05ex01/index.jsp";
+                nextUrl = "/_ch05ex0102/index.jsp";
             } 
             else {
                 message = "";
-                url = "/_ch05ex01/thanks.jsp";
+                nextUrl = "/_ch05ex0102/thanks.jsp";
                 UserDB.insert(user);
             }
             request.setAttribute("user", user);
             request.setAttribute("message", message);
         }
         getServletContext()
-                .getRequestDispatcher(url)
+                .getRequestDispatcher(nextUrl)
                 .forward(request, response);
-    }
-
-    @Override
-    protected void doGet(HttpServletRequest request,
-            HttpServletResponse response)
-            throws ServletException, IOException {
-        doPost(request, response);
     }
 }
