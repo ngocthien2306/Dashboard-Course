@@ -25,7 +25,7 @@
 					<span>Chap 4 exercise 1</span>
 				</div>
 				<div class="content-dash">
-					<h3 class="title-dash">Create JSP file</h3>
+					<h3 class="title-dash">Survey</h3>
 					<div class="message-content">
 						<span class="message-dash"> Some quick example text to
 							build on the card title and make up the bulk of the card's
@@ -63,7 +63,7 @@
 					<span>Chap 5 exercise 1 and 2</span> 
 				</div>
 				<div class="content-dash">
-					<h3 class="title-dash">Create JSP file</h3>
+					<h3 class="title-dash">Email</h3>
 					<div class="message-content">
 						<span class="message-dash"> Some quick example text to
 							build on the card title and make up the bulk of the card's
@@ -98,10 +98,10 @@
 			</div>
 			<div class="dashboard">
 				<div class="header-dash">
-					<span>Homeword 3</span>
+					<span>Chap 6 exercise 1</span>
 				</div>
 				<div class="content-dash">
-					<h3 class="title-dash">Create JSP file</h3>
+					<h3 class="title-dash">Email</h3>
 					<div class="message-content">
 						<span class="message-dash"> Some quick example text to
 							build on the card title and make up the bulk of the card's
@@ -109,7 +109,7 @@
 					</div>
 					<div class="link-dash">
 						<ul class="link-list">
-							<li class="link-item"><a href="#">Go to exercise</a></li>
+							<li class="link-item"><a href="_chap6ex01/index.jsp">Go to exercise</a></li>
 							<li class="link-item"><a href="#">Code</a></li>
 							<li class="link-item"><a href="#"> <label for="click">Comment</label></a></li>
 						</ul>
