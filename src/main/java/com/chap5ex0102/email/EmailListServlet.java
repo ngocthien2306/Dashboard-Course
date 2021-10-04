@@ -1,23 +1,23 @@
-package com.email.email;
+package com.chap5ex0102.email;
 
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-import com.email.business.User;
+import com.chap5ex0102.business.User;
 
 import javax.servlet.annotation.WebServlet;
 
-import com.email.data.UserDB;
+import com.chap5ex0102.data.UserDB;
 
-@WebServlet(urlPatterns = "/_email/emailList")
+@WebServlet(urlPatterns = "/_chap5ex0102/emailList")
 public class EmailListServlet extends HttpServlet {
 
 	@Override
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response)
             throws ServletException, IOException {
-        String nextUrl = "/_email/index.jsp";
+        String nextUrl = "/_chap5ex0102/index.jsp";
         
         // get current action
         String action = request.getParameter("action");
@@ -26,7 +26,7 @@ public class EmailListServlet extends HttpServlet {
         }
         // perform action and set URL to appropriate page
         if (action.equals("join")) {
-        	nextUrl = "/_email/index.jsp";    // the "join" page
+        	nextUrl = "/_chap5ex0102/index.jsp";    // the "join" page
         } 
         else if (action.equals("add")) {
             // get parameters from the request
@@ -42,11 +42,11 @@ public class EmailListServlet extends HttpServlet {
             if (firstName == null || lastName == null || email == null ||
                 firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
                 message = "Please fill out all three text boxes.";
-                nextUrl = "/_email/index.jsp";
+                nextUrl = "/_chap5ex0102/index.jsp";
             } 
             else {
                 message = "";
-                nextUrl = "/_email/thanks.jsp";
+                nextUrl = "/_chap5ex0102/thanks.jsp";
                 UserDB.insert(user);
             }
             request.setAttribute("user", user);

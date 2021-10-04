@@ -1,4 +1,4 @@
-package com.email.email;
+package com.chap5ex0102.email;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/_email/test")
+@WebServlet("/_chap5ex0102/test")
 public class TestServlet extends HttpServlet {
 
     @Override
