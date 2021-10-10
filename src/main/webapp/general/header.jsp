@@ -12,7 +12,7 @@
 			<!--header menu start-->
 			<div class="header">
 				<div class="header-menu">
-					<div class="title">Group <span>1</span></div>
+					<div class="title">Group <span>2</span></div>
 					<div class="sidebar-btn">
 						<i class="fas fa-bars"></i>
 					</div>

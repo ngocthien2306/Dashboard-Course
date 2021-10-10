@@ -35,7 +35,7 @@
 						<ul class="link-list">
 							<li class="link-item"><a href="_chap4ex01/index.html">Go
 									to exercise</a></li>
-							<li class="link-item"><a href="#">Code</a></li>
+							<li class="link-item"><a href="https://github.com/ngocthien2306/Dashboard-Course">Code</a></li>
 							<li class="link-item"><a href="#"> <label for="click">Comment</label></a></li>
 						</ul>
 					</div>
@@ -73,7 +73,7 @@
 						<ul class="link-list">
 							<li class="link-item"><a href="_chap5ex0102/index.jsp">Go
 									to exercise</a></li>
-							<li class="link-item"><a href="#">Code</a></li>
+							<li class="link-item"><a href="https://github.com/ngocthien2306/Dashboard-Course">Code</a></li>
 							<li class="link-item"><a href="#"> <label for="click">Comment</label></a></li>
 						</ul>
 					</div>
@@ -110,7 +110,7 @@
 					<div class="link-dash">
 						<ul class="link-list">
 							<li class="link-item"><a href="_chap6ex01/index.jsp">Go to exercise</a></li>
-							<li class="link-item"><a href="#">Code</a></li>
+							<li class="link-item"><a href="https://github.com/ngocthien2306/Dashboard-Course">Code</a></li>
 							<li class="link-item"><a href="#"> <label for="click">Comment</label></a></li>
 						</ul>
 					</div>
