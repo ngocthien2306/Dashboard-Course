@@ -12,11 +12,16 @@ import com.chap6ex01.data.UserDB;
 @WebServlet(urlPatterns = "/_chap6ex01/emailList")
 public class EmailListServlet_Chap6ex1 extends HttpServlet {
 
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response)
             throws ServletException, IOException {
-        String url = "/_chap6ex01/index.html";
+        String url = "index.html";
         
         // initialize the current year that's used in the copyright notice
         GregorianCalendar currentDate = new GregorianCalendar();
@@ -31,7 +36,7 @@ public class EmailListServlet_Chap6ex1 extends HttpServlet {
 
         // perform action and set URL to appropriate page
         if (action.equals("join")) {
-            url = "/_chap6ex01/index.jsp";    // the "join" page
+            url = "index.jsp";    // the "join" page
         } 
         else if (action.equals("add")) {
             // get parameters from the request
@@ -47,19 +52,18 @@ public class EmailListServlet_Chap6ex1 extends HttpServlet {
             if (firstName == null || lastName == null || email == null ||
                 firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
                 message = "Please fill out all three text boxes.";
-                url = "/_chap6ex01/index.jsp";
+                url = "index.jsp";
             } 
             else {
                 message = null;
-                url = "/_chap6ex01/thanks.jsp";
+                url = "thanks.jsp";
                 UserDB.insert(user);
             }
             request.setAttribute("user", user);
             request.setAttribute("message", message);
         }
-        getServletContext()
-                .getRequestDispatcher(url)
-                .forward(request, response);
+        
+        request.getRequestDispatcher(url).forward(request, response);
     }
     
     @Override
