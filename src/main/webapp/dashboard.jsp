@@ -171,6 +171,44 @@
 					</div>
 				</div>
 			</div>
+			<div class="dashboard">
+				<div class="header-dash">
+					<span>Chap 7 exercise 3</span>
+				</div>
+				<div class="content-dash">
+					<h3 class="title-dash">Cart</h3>
+					<div class="message-content">
+						<span class="message-dash"> Some quick example text to
+							build on the card title and make up the bulk of the card's
+							content. </span>
+					</div>
+					<div class="link-dash">
+						<ul class="link-list">
+							<li class="link-item"><a href="_chap7ex03/index.jsp">Go
+									to exercise</a></li>
+							<li class="link-item"><a href="https://github.com/ngocthien2306/Dashboard-Course">Code</a></li>
+							<li class="link-item"><a href="#"> <label for="click">Comment</label></a></li>
+						</ul>
+					</div>
+					<input type="checkbox" id="click">
+					<div class="comment">
+
+						<div class="comment-content">
+							<textarea class="comment-control-text" rows="5" name="name"
+								placeholder="Comment here...."></textarea>
+							<input class="comment-control" type="text" name="" value=""
+								placeholder="Score">
+						</div>
+						<div class="commnet-footer">
+							<button class="comment-control btn" type="submit" name="button">Post</button>
+						</div>
+					</div>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 25%;"
+							aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
