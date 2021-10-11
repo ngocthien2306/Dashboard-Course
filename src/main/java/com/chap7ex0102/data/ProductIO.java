@@ -1,28 +1,29 @@
 package com.chap7ex0102.data;
 
+import com.chap7ex0102.business.Product;
 import java.io.*;
 import java.util.*;
 
-import com.chap7ex0102.business.*;
 
-public class ProductIO
-{
-    public static Product getProduct(String code, String filepath)
-    {
-        try
-        {
-            File file = new File(filepath);
-            BufferedReader in = 
-                new BufferedReader(
-                new FileReader(file));
+public class ProductIO {
+	
+	static String text = "8601|86 (the band) - True Life Songs and Pictures|14.95\r\n"
+			+ "pf01|Paddlefoot - The first CD|12.95\r\n"
+			+ "pf02|Paddlefoot - The second CD|14.95\r\n"
+			+ "jr01|Joe Rut - Genuine Wood Grained Finish|14.95";
 
+    public static Product getProduct(String code, String filepath) {
+        try {
+            //File file = new File(filepath);
+            BufferedReader in
+                    = new BufferedReader(
+                            new StringReader(text));
+            
             String line = in.readLine();
-            while (line != null)
-            {
+            while (line != null) {
                 StringTokenizer t = new StringTokenizer(line, "|");
                 String productCode = t.nextToken();
-                if (code.equalsIgnoreCase(productCode))
-                {
+                if (code.equalsIgnoreCase(productCode)) {
                     String description = t.nextToken();
                     double price = Double.parseDouble(t.nextToken());
                     Product p = new Product();
@@ -36,27 +37,22 @@ public class ProductIO
             }
             in.close();
             return null;
-        }
-        catch(IOException e)
-        {
-            e.printStackTrace();
+        } catch (IOException e) {
+            System.err.println(e);
             return null;
         }
     }
 
-    public static ArrayList<Product> getProducts(String filepath)
-    {
+    public static ArrayList<Product> getProducts(String filepath) {
         ArrayList<Product> products = new ArrayList<Product>();
-        File file = new File(filepath);
-        try
-        {
-            BufferedReader in = 
-                new BufferedReader(
-                new FileReader(file));
+        //File file = new File(filepath);
+        try {
+            BufferedReader in
+                    = new BufferedReader(
+                    		new StringReader(text));
 
             String line = in.readLine();
-            while (line != null)
-            {
+            while (line != null) {
                 StringTokenizer t = new StringTokenizer(line, "|");
                 String code = t.nextToken();
                 String description = t.nextToken();
@@ -71,10 +67,8 @@ public class ProductIO
             }
             in.close();
             return products;
-        }
-        catch(IOException e)
-        {
-            e.printStackTrace();
+        } catch (IOException e) {
+            System.err.println(e);
             return null;
         }
     }

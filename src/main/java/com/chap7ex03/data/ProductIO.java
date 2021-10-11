@@ -6,14 +6,19 @@ import java.util.*;
 
 
 public class ProductIO {
+	
+	static String text = "8601|86 (the band) - True Life Songs and Pictures|14.95\r\n"
+			+ "pf01|Paddlefoot - The first CD|12.95\r\n"
+			+ "pf02|Paddlefoot - The second CD|14.95\r\n"
+			+ "jr01|Joe Rut - Genuine Wood Grained Finish|14.95";
 
     public static Product getProduct(String code, String filepath) {
         try {
-            File file = new File(filepath);
+            //File file = new File(filepath);
             BufferedReader in
                     = new BufferedReader(
-                            new FileReader(file));
-
+                            new StringReader(text));
+            
             String line = in.readLine();
             while (line != null) {
                 StringTokenizer t = new StringTokenizer(line, "|");
@@ -40,11 +45,11 @@ public class ProductIO {
 
     public static ArrayList<Product> getProducts(String filepath) {
         ArrayList<Product> products = new ArrayList<Product>();
-        File file = new File(filepath);
+        //File file = new File(filepath);
         try {
             BufferedReader in
                     = new BufferedReader(
-                            new FileReader(file));
+                    		new StringReader(text));
 
             String line = in.readLine();
             while (line != null) {
