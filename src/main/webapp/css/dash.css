@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   padding: 15px;
-  background: url(background.jpg);
+  background: url();
 
 }
 .wrapper.collapse .container-dashboard{
@@ -20,8 +20,13 @@
   width: 100%;
 
 }
+.container-dashboard {
+	display: flex;
+}
+
+
 .dashboard-right {
-  background-color: #F6F8FA;
+	  background-color: #F6F8FA;
   margin: 0 20px;
   width: 33%;
 }
@@ -33,6 +38,7 @@
   align-items: center;
   display: block;
   margin: 20px;
+  background-image: linear-gradient(0, #F4F6F7, #F2F3F4);
 }
 .header-dash {
   width: 100%;
@@ -133,14 +139,38 @@ color: #27B3F7;
 #click {
   display: none;
 }
+#click1 {
+  display: none;
+}
+#click2 {
+  display: none;
+}
+#click3 {
+  display: none;
+}
+#click4 {
+  display: none;
+}
+
+
 /* Comment Box*/
 .comment {
   display: none;
   width: 100%;
   height: 100%;
   margin: 5px;
-
+  animation: comment 1s ease;
+  	transition: transform 2s;
 }
+@keyframes comment {
+	from {
+		top: 0px
+	}
+	to {
+		bottom: 250px;
+	}
+}
+
 .comment-title {
   color: #55A3F0;
   margin: 10px 0;
@@ -149,6 +179,20 @@ color: #27B3F7;
 
 }
 #click:checked ~ .comment {
+  display: block;
+
+}
+#click1:checked ~ .comment {
+  display: block;
+    animation: comment 1s ease;
+}
+#click2:checked ~ .comment {
+  display: block;
+}
+#click3:checked ~ .comment {
+  display: block;
+}
+#click4:checked ~ .comment {
   display: block;
 }
 .commnent-content {

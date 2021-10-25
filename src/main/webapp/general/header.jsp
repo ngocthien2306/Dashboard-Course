@@ -1,14 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="ISO-8859-1">
- 		<title>Insert title here</title>
-	</head>
-	<body>
-		<!--wrapper start-->
-		<div class="wrapper">
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	
+<div class="wrapper">
 			<!--header menu start-->
 			<div class="header">
 				<div class="header-menu">
@@ -27,12 +21,9 @@
 			<!--sidebar start-->
 			<div class="sidebar">
 				<div class="sidebar-menu">
-					<center class="profile">
-						<img src="./assets/img/images.png" alt="">
-						<p>D-D-T</p>
-					</center>
+					<center class="profile"><img src="./assets/img/images.png" alt=""><p>D-D-T</p></center>
 					<li class="item">
-						<a href="dashboard.jsp" class="menu-btn">
+						<a href="exercise" class="menu-btn">
 							<i class="fas fa-desktop"></i><span>Dashboard</span>
 						</a>
 					</li>
@@ -71,23 +62,7 @@
 					</li>
 				</div>
 			</div>
-	</body>	
 			<script type="text/javascript">
-		$(document).ready(function(){
-			$(".sidebar-btn").click(function(){
-				$(".wrapper").toggleClass("collapse");
-			});
-		});
-		$(document).ready(function(){
-			//toggle sub-menus
-			$(".card-btn").click(function(){
-				$(this).next(".card").slideToggle();
-			});
-
-			//toggle more-menus
-			$(".more-btn").click(function(){
-				$(this).next(".more-menu").slideToggle();
-			});
-		});
-		</script>
-</html>
+			<c:import url="js\header.js"></c:import>
+			</script>
+			
