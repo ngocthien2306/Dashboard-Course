@@ -1,4 +1,6 @@
 @charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&family=Satisfy&display=swap');
+
 .container-dashboard {
   width: (100% - 250px);
   margin-top: 70px;
@@ -7,7 +9,7 @@
   display: flex;
   justify-content: center;
   padding: 15px;
-  background: url(background.jpg);
+  background: url();
 
 }
 .wrapper.collapse .container-dashboard{
@@ -20,8 +22,13 @@
   width: 100%;
 
 }
+.container-dashboard {
+	display: flex;
+}
+
+
 .dashboard-right {
-  background-color: #F6F8FA;
+	  background-color: #F6F8FA;
   margin: 0 20px;
   width: 33%;
 }
@@ -33,6 +40,7 @@
   align-items: center;
   display: block;
   margin: 20px;
+  background-image: linear-gradient(0, #F4F6F7, #F2F3F4);
 }
 .header-dash {
   width: 100%;
@@ -54,8 +62,13 @@
   width: 90%;
   margin: auto;
 }
-.message-dash {
-  font-size: 14px;
+span.message-dash {
+  font-size: 15px;
+  font-weight: 300;
+}
+span.title-header {
+  font-weight: 300;
+  font-size: 17px;
 }
 .link-list {
   display: flex;
@@ -73,6 +86,9 @@
 }
 .link-item a{
 color: #27B3F7;
+}
+.link-item a:hover{
+color: #3498DB;
 }
 .progress {
   vertical-align: baseline;
@@ -133,14 +149,41 @@ color: #27B3F7;
 #click {
   display: none;
 }
+#click1 {
+  display: none;
+}
+#click2 {
+  display: none;
+}
+#click3 {
+  display: none;
+}
+#click4 {
+  display: none;
+}
+#click5 {
+  display: none;
+}
+
+
 /* Comment Box*/
 .comment {
   display: none;
   width: 100%;
   height: 100%;
   margin: 5px;
-
+  animation: comment 1s ease;
+  	transition: transform 2s;
 }
+@keyframes comment {
+	from {
+		top: 0px
+	}
+	to {
+		bottom: 250px;
+	}
+}
+
 .comment-title {
   color: #55A3F0;
   margin: 10px 0;
@@ -150,10 +193,31 @@ color: #27B3F7;
 }
 #click:checked ~ .comment {
   display: block;
+
+}
+#click1:checked ~ .comment {
+  display: block;
+    animation: comment 1s ease;
+}
+#click2:checked ~ .comment {
+  display: block;
+}
+#click3:checked ~ .comment {
+  display: block;
+}
+#click4:checked ~ .comment {
+  display: block;
+}
+#click5:checked ~ .comment {
+  display: block;
 }
 .commnent-content {
   width: 100%;
   display: block;
+  outline: none;
+}
+.evaluate{
+	display: flex;
 }
 
 textarea.comment-control-text {
@@ -162,9 +226,10 @@ textarea.comment-control-text {
   border-radius: 10px;
   border: none;
   margin: 5px 0;
-  font-size: 14px;
+  font-size: 13px;
   outline: none;
-  padding: 2px 10px;
+  padding: 4px 10px;
+  font-weight: 300;
 
 
 }
@@ -207,4 +272,15 @@ textarea.comment-control-text {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   margin: 5px 0;
   border-radius: 20px;
+  outline: none;
+}
+.comment-control_0 {
+    width: 100%;
+    outline: none;
+    height: 35px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 30px;
+    padding: 0 10px;
+    margin-bottom: 3px;
 }

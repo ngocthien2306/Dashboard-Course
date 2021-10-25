@@ -1,4 +1,5 @@
 @charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&family=Satisfy&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -9,7 +10,7 @@
 }
 
 body{
-  background: #fff;
+  background: #EBF5FB;
 
 }
 .wrapper .header{
@@ -91,6 +92,7 @@ body{
   transition: 0.3s;
   transition-property: width;
   overflow-y: auto;
+  font-weight: 400;
 }
 
 .wrapper .sidebar .sidebar-menu{
@@ -113,6 +115,7 @@ body{
 .wrapper .sidebar .sidebar-menu .item{
   width: 250px;
   overflow: hidden;
+  font-weight: 400;
 }
 
 .wrapper .sidebar .sidebar-menu .item .menu-btn{
@@ -194,16 +197,19 @@ body{
   font-size: 18px;
   padding-left: 3px;
 }
-.wrapper .container{
+.container{
   width: (100% - 250px);
   margin-top: 70px;
   margin-left: 250px;
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   padding: 15px;
-  background: url(./assets/img/background.jpg);
+  background: url(assets/imgbackground.jpg) no-repeat;
+  background-size: contain;
+  background-image: linear-gradient(0, #F4F6F7, #F2F3F4);
 }
 .wrapper.collapse .container{
   width: calc(100% - 70px);
@@ -212,13 +218,7 @@ body{
 
 }
 
-.container{
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
+
 
 .card{
   position: relative;
@@ -227,13 +227,10 @@ body{
   width: 280px;
   margin: 25px;
   box-shadow: 0 5px 25px rgb(0,0,0 / 10%);
-  border-radius: 20px 20px 10px;
+  border-radius: 5px;
   height: 400px;
-  border-top: 3px solid #3DA8EF;
 }
-.card:hover {
- 	
-}
+
 
 .card-image{
   max-height: 200px;
@@ -251,17 +248,6 @@ body{
 
 }
 
-.card-title span{
-
-}
-
-.card-description span{
-
-}
-
-.card-mediaIcons a i{
-
-}
 
 .card-info{
   position: relative;
