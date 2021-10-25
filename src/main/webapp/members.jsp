@@ -13,6 +13,7 @@
 	<body>	
 				<c:import url="general\header.jsp"></c:import>
 			<div class="container">
+			
 						<div class="card" id="card-btn">
 							<div class="card-image loading">
 								<img src="./assets/img/Dat.jpg" alt="">

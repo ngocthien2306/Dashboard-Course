@@ -22,14 +22,12 @@
       <c:forEach var="theEx" items="${list_exercise}">
         <div class="dashboard">
           <div class="header-dash">
-            <span>${theEx.header}</span>
+            <span class="title-header">${theEx.header}</span>
           </div>
           <div class="content-dash">
             <h3 class="title-dash">${theEx.title}</h3>
             <div class="message-content">
-              <span class="message-dash"> Some quick example text to
-                build on the card title and make up the bulk of the card's
-                content. </span>
+              <span class="message-dash">${theEx.description}</span>
             </div>
             <div class="link-dash">
               <ul class="link-list">
@@ -45,7 +43,11 @@
                   <input type="hidden" name="command" value="UPDATE" />
                   <input type="hidden" name="eid" value="${theEx.id}" />
                   <textarea class="comment-control-text" rows="5" name="comment" placeholder="Comment here....">${theEx.comment}</textarea>
-                  <input class="comment-control" type="text" name="score" value="${theEx.score}" placeholder="Score">
+                  <div class="evaluate">
+                  	<input class="comment-control_0" type="text" name="score" value="${theEx.score}" placeholder="Score"> 
+                  	<input class="comment-control_0" type="text" name="level" value="" placeholder="Completion level 1-100"> 
+                  </div>
+
                 </div>
                 <div class="commnet-footer">
                   <button class="comment-control btn">POST</button>

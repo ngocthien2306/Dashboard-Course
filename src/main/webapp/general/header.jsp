@@ -21,7 +21,7 @@
 			<!--sidebar start-->
 			<div class="sidebar">
 				<div class="sidebar-menu">
-					<center class="profile"><img src="./assets/img/images.png" alt=""><p>D-D-T</p></center>
+					<center class="profile"><img src="./assets/img/images.png" alt=""><p>Group 2</p></center>
 					<li class="item">
 						<a href="exercise" class="menu-btn">
 							<i class="fas fa-desktop"></i><span>Dashboard</span>
