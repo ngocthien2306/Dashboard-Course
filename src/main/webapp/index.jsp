@@ -12,12 +12,9 @@
 	</head>
 	<body>
 			<c:import url="general\header.jsp"></c:import>
-			<!--sidebar end-->
-			<!--main container start-->
-			<div class="container">
-			
-			</div>
-		<!--wrapper end-->
+
+			<div class="container"> </div>
+
 
 	</body>
 </html>

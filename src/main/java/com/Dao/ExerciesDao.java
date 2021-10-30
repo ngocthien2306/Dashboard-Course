@@ -19,7 +19,7 @@ public class ExerciesDao {
 	public ExerciesDao(DataSource theDataSource) {
 		dataSource = theDataSource;
 	}
-	String sql = "SELECT * FROM exercise";
+	String sql = "SELECT * FROM exercise order by id asc";
 	public List<Exercise> getExercise() throws SQLException {
 		List<Exercise> exercise = new ArrayList<>();
 		Connection myCon = null;
@@ -34,12 +34,13 @@ public class ExerciesDao {
 				String header = myRes.getString("header");
 				String title = myRes.getString("titles");
 				String description = myRes.getString("descriptions");
-				String comment = myRes.getString("conment");
+				String comment = myRes.getString("comment");
 				double score = myRes.getDouble("score");
 				String click = myRes.getString("click");
 				String linkcode = myRes.getString("linkcode");
 				String linkfolder = myRes.getString("linkfolder");
-				Exercise theExercise = new Exercise(id, header, title, description, comment, score, linkcode, linkfolder, click);
+				int process = myRes.getInt("process");
+				Exercise theExercise = new Exercise(id, header, title, description, comment, score, linkcode, linkfolder, click, process);
 				exercise.add(theExercise);
 			}
 			return exercise;
@@ -71,11 +72,12 @@ public class ExerciesDao {
 		PreparedStatement myRta = null;
 		try {
 			myCon = dataSource.getConnection();
-			String sql = "update exercise set conment = ?, score = ? where id = ?";
+			String sql = "update exercise set comment = ?, score = ?, process = ? where id = ?";
 			myRta = myCon.prepareStatement(sql);
 			myRta.setString(1,theExercise.getComment());
 			myRta.setDouble(2, theExercise.getScore());
-			myRta.setInt(3, theExercise.getId());
+			myRta.setInt(3, theExercise.getProcess());
+			myRta.setInt(4, theExercise.getId());
 			myRta.execute();
 		}
 		finally {

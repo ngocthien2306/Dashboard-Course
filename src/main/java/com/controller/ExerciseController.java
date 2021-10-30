@@ -71,7 +71,8 @@ public class ExerciseController extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("eid"));
 		String comment = request.getParameter("comment");
 		double score = Double.parseDouble(request.getParameter("score"));
-		Exercise  theExercise = new Exercise(id, "", "", "", comment, score);
+		int process = Integer.parseInt(request.getParameter("level"));
+		Exercise  theExercise = new Exercise(id, comment, score, process);
 		exerciseDao.updateScores(theExercise);
 		listExercise(request, response);
 		

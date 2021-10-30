@@ -45,7 +45,7 @@
                   <textarea class="comment-control-text" rows="5" name="comment" placeholder="Comment here....">${theEx.comment}</textarea>
                   <div class="evaluate">
                   	<input class="comment-control_0" type="text" name="score" value="${theEx.score}" placeholder="Score"> 
-                  	<input class="comment-control_0" type="text" name="level" value="" placeholder="Completion level 1-100"> 
+                  	<input class="comment-control_1" type="text" name="level" value="" placeholder="Completion level 1-100"> 
                   </div>
 
                 </div>
@@ -55,7 +55,7 @@
               </form>
             </div>
             <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 88%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar" role="progressbar" style="width: ${theEx.process}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
         </div>

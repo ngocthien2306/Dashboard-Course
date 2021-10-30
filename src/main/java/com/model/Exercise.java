@@ -10,7 +10,16 @@ public class Exercise {
 	public String linkcode;
 	public String linkfolder;
 	public String click;
+	public int process;
 
+
+	public int getProcess() {
+		return process;
+	}
+
+	public void setProcess(int process) {
+		this.process = process;
+	}
 
 	public String getLinkcode() {
 		return linkcode;
@@ -36,7 +45,7 @@ public class Exercise {
 		this.click = click;
 	}
 	public Exercise(int id, String header, String title, String description, String comment, double score,
-			String linkcode, String linkfolder, String click) {
+			String linkcode, String linkfolder, String click, int process) {
 		super();
 		this.id = id;
 		this.header = header;
@@ -47,6 +56,7 @@ public class Exercise {
 		this.linkcode = linkcode;
 		this.linkfolder = linkfolder;
 		this.click = click;
+		this.process = process;
 	}
 
 	public Exercise(int id, String header, String title, String description, String comment, double score) {
@@ -66,6 +76,14 @@ public class Exercise {
 		this.description = description;
 		this.comment = comment;
 		this.score = score;
+	}
+
+	public Exercise(int id, String comment, double score, int process) {
+		super();
+		this.id = id;
+		this.comment = comment;
+		this.score = score;
+		this.process = process;
 	}
 
 	public int getId() {

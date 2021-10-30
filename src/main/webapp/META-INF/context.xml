@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <context> 
 	  <Resource name="jdbc/dashboard" 
   			auth="Container" type="javax.sql.DataSource"
                maxActive="20" 
-               maxIdle="5" 
-               maxWait="10000"
-               username="dashboard" 
-               password="dashboard" 
-               driverClassName="com.mysql.jdbc.Driver"
-               url="jdbc:mysql://localhost:3306/dashboard?allowPublicKeyRetrieval=true"                 
+               maxIdle="30" 
+               maxWait="100000"
+               username="postgres" 
+               password="ngocthien2306.com" 
+               driverClassName="org.postgresql.Driver"
+               url="jdbc:postgresql://localhost:5432/dashboard?allowPublicKeyRetrieval=true"                 
        />    
 </context>
